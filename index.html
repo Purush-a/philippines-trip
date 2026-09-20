@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="lean">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Philippines · 7 days</title>
+<meta name="description" content="Budget, route, street prices and checklist for a 7-day Philippines trip via Hanoi.">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#0E4A55">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Philippines">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="icon" href="icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --abyss:#06282F;
+  --petrol:#0E4A55;
+  --slate:#4E6B70;
+  --hair:#D2DEDA;
+  --seaglass:#E9F0ED;
+  --shell:#FFFFFF;
+  --lagoon:#12968C;
+  --mango:#C97A0B;
+  --accent:var(--lagoon);
+  --accent-soft:#D8EDE9;
+  --accent-ink:#0A5F58;
+  --pad:20px;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  background:var(--seaglass);
+  color-scheme:light;
+}
+html[data-mode="comfortable"]{
+  --accent:var(--mango);
+  --accent-soft:#F6E6C8;
+  --accent-ink:#8C5504;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--seaglass);
+  color:var(--abyss);
+  font-family:"Archivo","Helvetica Neue",Arial,sans-serif;
+  font-variation-settings:"wdth" 100,"wght" 400;
+  font-weight:400;
+  font-size:16px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:640px;margin:0 auto;padding:0 var(--pad) 76px}
+
+/* ── header ────────────────────────────────── */
+.top{padding:26px 0 8px}
+.trip{
+  font-variation-settings:"wdth" 78,"wght" 700;font-weight:700;
+  font-size:clamp(30px,9vw,44px);
+  line-height:.98;letter-spacing:-.015em;margin:0 0 4px;
+}
+.trip span{display:block;color:var(--slate);font-variation-settings:"wdth" 78,"wght" 500;font-weight:500;font-size:.44em;letter-spacing:.01em;margin-top:8px}
+.route{
+  display:flex;align-items:center;margin:18px 0 0;padding:0;list-style:none;
+  overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;
+}
+.route::-webkit-scrollbar{display:none}
+.route li{display:flex;align-items:center;flex:0 0 auto;font-size:12.5px;font-variation-settings:"wdth" 88,"wght" 600;font-weight:600;color:var(--petrol)}
+.route li::after{content:"";width:16px;height:1.5px;background:var(--hair);margin:0 7px;flex:0 0 auto}
+.route li:last-child::after{display:none}
+.route .dot{width:7px;height:7px;border-radius:50%;background:var(--petrol);margin-right:6px}
+.route li.air .dot{background:var(--accent);transition:background .35s}
+.route li.out{color:var(--slate)}
+.route li.out .dot{background:var(--hair)}
+
+/* ── mode switch ───────────────────────────── */
+.switch{display:grid;grid-template-columns:1fr 1fr;margin:24px 0 0;border:1.5px solid var(--abyss);border-radius:2px;overflow:hidden}
+.switch button{
+  appearance:none;border:0;background:transparent;cursor:pointer;
+  font-family:inherit;font-size:13px;font-variation-settings:"wdth" 90,"wght" 650;font-weight:650;
+  color:var(--abyss);padding:12px 8px;text-align:center;transition:background .25s,color .25s;
+}
+.switch button+button{border-left:1.5px solid var(--abyss)}
+.switch button small{display:block;font-variation-settings:"wdth" 90,"wght" 400;font-weight:400;font-size:11px;opacity:.62;margin-top:3px}
+.switch button .bt{display:block;font-size:15px;margin-top:5px;font-variant-numeric:tabular-nums;font-variation-settings:"wdth" 80,"wght" 700;font-weight:700}
+.switch button[aria-pressed="true"]{background:var(--abyss);color:#fff}
+.switch button:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+
+/* ── headline total ────────────────────────── */
+.total{margin:26px 0 0;padding:24px 22px;background:var(--shell);border-radius:3px;border-left:5px solid var(--accent);transition:border-color .35s}
+.total .fig{
+  font-variation-settings:"wdth" 70,"wght" 750;font-weight:750;
+  font-size:clamp(46px,15vw,72px);line-height:.92;letter-spacing:-.025em;
+  font-variant-numeric:tabular-nums;display:block;
+}
+.total .cap{display:block;font-size:13px;color:var(--slate);margin-top:10px;font-variation-settings:"wdth" 92,"wght" 500;font-weight:500}
+.split{display:flex;gap:26px;margin-top:20px;padding-top:18px;border-top:1px solid var(--hair);flex-wrap:wrap}
+.split div{flex:1 1 120px}
+.split b{display:block;font-variation-settings:"wdth" 80,"wght" 700;font-weight:700;font-size:21px;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.split em{display:block;font-style:normal;font-size:12px;color:var(--slate);margin-top:3px}
+
+/* ── sections ──────────────────────────────── */
+section{margin-top:44px}
+h2{font-variation-settings:"wdth" 80,"wght" 700;font-weight:700;font-size:22px;letter-spacing:-.01em;margin:0 0 4px}
+.sub{color:var(--slate);font-size:13.5px;margin:0 0 16px;max-width:52ch}
+
+/* ── ledger ────────────────────────────────── */
+.ledger{background:var(--shell);border-radius:3px;overflow:hidden}
+.grp{border-bottom:1px solid var(--hair)}
+.grp:last-child{border-bottom:0}
+.grp>summary{display:flex;align-items:baseline;gap:10px;cursor:pointer;list-style:none;padding:15px 18px;font-variation-settings:"wdth" 88,"wght" 620;font-weight:600;font-size:14.5px}
+.grp>summary::-webkit-details-marker{display:none}
+.grp>summary:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.grp .chev{width:9px;height:9px;border-right:1.8px solid var(--slate);border-bottom:1.8px solid var(--slate);transform:rotate(45deg) translateY(-2px);transition:transform .2s;flex:0 0 auto;align-self:center}
+.grp[open] .chev{transform:rotate(-135deg) translateY(-2px)}
+.grp .gname{flex:1 1 auto}
+.grp .gsum{font-variant-numeric:tabular-nums;font-variation-settings:"wdth" 80,"wght" 700;font-weight:700;font-size:15px}
+.rows{padding:0 18px 14px}
+.row{display:flex;gap:12px;align-items:baseline;padding:7px 0;border-top:1px dotted var(--hair);font-size:13.5px}
+.row:first-child{border-top:0;padding-top:2px}
+.row .n{flex:1 1 auto;color:var(--petrol)}
+.row .n i{display:block;font-style:normal;font-size:11.5px;color:var(--slate);margin-top:1px}
+.row .p{font-variant-numeric:tabular-nums;color:var(--slate);font-size:12.5px;flex:0 0 auto;min-width:64px;text-align:right}
+.row .v{font-variant-numeric:tabular-nums;font-variation-settings:"wdth" 88,"wght" 600;font-weight:600;flex:0 0 auto;min-width:64px;text-align:right}
+.row.zero{opacity:.42}
+.row.zero .v::after{content:" —"}
+.paid{background:var(--accent-soft);color:var(--accent-ink);font-size:12.5px;padding:10px 18px;border-top:1px solid var(--hair);transition:background .35s,color .35s}
+
+/* ── itinerary ─────────────────────────────── */
+.days{list-style:none;margin:0;padding:0}
+.day{display:grid;grid-template-columns:30px 1fr;gap:14px;padding:0 0 24px;position:relative}
+.day::before{content:"";position:absolute;left:14px;top:22px;bottom:-2px;width:1.5px;background:var(--hair)}
+.day:last-child::before{display:none}
+.day .num{width:30px;height:30px;border-radius:50%;background:var(--abyss);color:#fff;display:grid;place-items:center;font-size:12px;font-variation-settings:"wdth" 85,"wght" 700;font-weight:700;position:relative;z-index:1}
+.day.pre .num{background:var(--shell);color:var(--slate);border:1.5px solid var(--hair);font-size:10px}
+.day h3{margin:4px 0 3px;font-size:15.5px;font-variation-settings:"wdth" 88,"wght" 650;font-weight:650}
+.day p{margin:0;font-size:13.5px;color:var(--slate);max-width:48ch}
+.day .tag{display:inline-block;margin-top:9px;font-size:11.5px;padding:3px 8px;border-radius:2px;background:var(--accent-soft);color:var(--accent-ink);font-variation-settings:"wdth" 90,"wght" 600;font-weight:600;transition:background .35s,color .35s}
+
+/* ── street prices ─────────────────────────── */
+.board{background:var(--shell);border-radius:3px;padding:6px 18px 12px}
+.board h4{margin:14px 0 4px;font-size:12.5px;color:var(--slate);font-variation-settings:"wdth" 90,"wght" 600;font-weight:600}
+.fare{display:flex;gap:12px;align-items:baseline;padding:7px 0;border-top:1px dotted var(--hair);font-size:13.5px}
+.fare .n{flex:1 1 auto;color:var(--petrol)}
+.fare .n i{display:block;font-style:normal;font-size:11.5px;color:var(--slate)}
+.fare .v{font-variant-numeric:tabular-nums;font-variation-settings:"wdth" 88,"wght" 600;font-weight:600;flex:0 0 auto;text-align:right;white-space:nowrap}
+
+/* ── converter ─────────────────────────────── */
+.conv{background:var(--abyss);color:#fff;border-radius:3px;padding:22px}
+.conv h2{color:#fff;margin-bottom:14px}
+.cfield{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.16)}
+.cfield label{font-size:13px;color:rgba(255,255,255,.66);flex:0 0 66px;font-variation-settings:"wdth" 90,"wght" 500;font-weight:500}
+.cfield input{flex:1 1 auto;min-width:0;appearance:none;background:transparent;border:0;color:#fff;font-family:inherit;font-size:27px;font-variation-settings:"wdth" 78,"wght" 700;font-weight:700;font-variant-numeric:tabular-nums;padding:0;width:100%}
+.cfield input:focus{outline:0}
+.cfield:focus-within label{color:var(--accent)}
+.rate{display:flex;align-items:center;gap:8px;margin-top:16px;font-size:12.5px;color:rgba(255,255,255,.6);flex-wrap:wrap}
+.rate input{width:76px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:2px;color:#fff;font-family:inherit;font-size:16px;padding:6px 8px;font-variant-numeric:tabular-nums}
+.rate input:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+
+/* ── checklist ─────────────────────────────── */
+.check{background:var(--shell);border-radius:3px;padding:6px 18px}
+.check label{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--hair);cursor:pointer;font-size:13.5px}
+.check label:first-of-type{border-top:0}
+.check input{appearance:none;flex:0 0 auto;width:19px;height:19px;margin:1px 0 0;border:1.5px solid var(--slate);border-radius:2px;cursor:pointer;position:relative;background:#fff}
+.check input:checked{background:var(--accent);border-color:var(--accent)}
+.check input:checked::after{content:"";position:absolute;left:5.5px;top:1.5px;width:5px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(43deg)}
+.check input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.check input:checked+span{color:var(--slate);text-decoration:line-through;text-decoration-color:var(--hair)}
+.check span i{display:block;font-style:normal;font-size:11.5px;color:var(--slate);margin-top:2px;text-decoration:none}
+.reset{margin-top:12px;font-size:12px;color:var(--slate);background:none;border:0;padding:6px 0;cursor:pointer;font-family:inherit;text-decoration:underline}
+
+/* ── notes ─────────────────────────────────── */
+.notes{margin:0;padding:0;list-style:none}
+.notes li{padding:13px 0;border-top:1px solid var(--hair);font-size:13.5px;color:var(--petrol);max-width:56ch}
+.notes li:first-child{border-top:0}
+.notes b{font-variation-settings:"wdth" 90,"wght" 650;font-weight:650;color:var(--abyss)}
+
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--hair);font-size:11.5px;color:var(--slate);line-height:1.6}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition-duration:.01ms !important;animation-duration:.01ms !important}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1 class="trip">Philippines<span>Seven days, two islands, one ocean of sardines</span></h1>
+
+    
+
+    <ul class="route">
+      <li class="air"><span class="dot"></span>Bengaluru</li>
+      <li class="air"><span class="dot"></span>Hanoi</li>
+      <li class="air"><span class="dot"></span>Cebu</li>
+      <li><span class="dot"></span>Moalboal</li>
+      <li><span class="dot"></span>Bohol</li>
+      <li class="air"><span class="dot"></span>Palawan</li>
+      <li class="air"><span class="dot"></span>Manila</li>
+      <li class="out"><span class="dot"></span>Chennai</li>
+    </ul>
+
+    <div class="switch" role="group" aria-label="Spending mode">
+      <button type="button" data-set="lean" aria-pressed="true">Lean<small>Dorms, buses, three tours</small><b class="bt" data-bt="lean"></b></button>
+      <button type="button" data-set="comfortable" aria-pressed="false">Comfortable<small>Private rooms, Grab, five tours</small><b class="bt" data-bt="comfortable"></b></button>
+    </div>
+
+    <div class="total" aria-live="polite">
+      <b class="fig" id="fig">₹0</b>
+      <span class="cap" id="cap">Everything, door to door</span>
+      <div class="split">
+        <div><b id="left">₹0</b><em>Still to spend</em></div>
+        <div><b id="daily">₹0</b><em>A day in the Philippines</em></div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Where the money goes</h2>
+    <p class="sub">Peso amounts on the left, converted at the rate you set below. Tap a heading to open it.</p>
+    <div class="ledger" id="ledger"></div>
+    <div class="paid" id="paidnote"></div>
+  </section>
+
+  <section>
+    <h2>The seven days</h2>
+    <p class="sub">Cebu and Bohol first, then west to Palawan. The sardine run is at Moalboal in south Cebu, so it sits early — there's no way back east once you fly out.</p>
+    <ol class="days" id="days"></ol>
+  </section>
+
+  <section>
+    <h2>What things cost on the street</h2>
+    <p class="sub">So you know when a price is a tourist price. Fares first, food after.</p>
+    <div class="board">
+      <h4>Getting around</h4>
+      <div class="fare"><span class="n">Jeepney hop<i>say “lugar lang” to get off</i></span><span class="v">₱13–15</span></div>
+      <div class="fare"><span class="n">Tricycle, short ride<i>agree the price before you sit down</i></span><span class="v">₱20–50</span></div>
+      <div class="fare"><span class="n">Habal-habal motorbike taxi</span><span class="v">₱50–150</span></div>
+      <div class="fare"><span class="n">Aircon Ceres bus, Cebu → Moalboal</span><span class="v">₱200–250</span></div>
+      <div class="fare"><span class="n">OceanJet ferry, Cebu → Bohol<i>plus ₱25 terminal fee</i></span><span class="v">₱1,000–1,200</span></div>
+      <h4>Eating</h4>
+      <div class="fare"><span class="n">Carinderia meal, rice and an ulam</span><span class="v">₱80–150</span></div>
+      <div class="fare"><span class="n">Silog breakfast</span><span class="v">₱90–130</span></div>
+      <div class="fare"><span class="n">Cebu lechon, a quarter kilo</span><span class="v">₱200–300</span></div>
+      <div class="fare"><span class="n">Fresh buko off a cart</span><span class="v">₱30–60</span></div>
+      <div class="fare"><span class="n">1.5L water</span><span class="v">₱30–50</span></div>
+      <div class="fare"><span class="n">San Miguel at a sari-sari store</span><span class="v">₱50–80</span></div>
+      <h4>The Hanoi hours</h4>
+      <div class="fare"><span class="n">Bus 86, Noi Bai → Old Quarter</span><span class="v">₫45,000</span></div>
+      <div class="fare"><span class="n">Bowl of pho</span><span class="v">₫40–70,000</span></div>
+      <div class="fare"><span class="n">Banh mi</span><span class="v">₫20–35,000</span></div>
+      <div class="fare"><span class="n">Egg coffee</span><span class="v">₫35–50,000</span></div>
+      <h4>Tempting, not in the budget</h4>
+      <div class="fare"><span class="n">Fun dive at Moalboal<i>the sardines at depth are something else</i></span><span class="v">₱1,500–2,000</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="conv">
+      <h2>Peso to rupee</h2>
+      <div class="cfield">
+        <label for="php">Pesos</label>
+        <input id="php" type="text" inputmode="decimal" value="1000" autocomplete="off">
+      </div>
+      <div class="cfield">
+        <label for="inr">Rupees</label>
+        <input id="inr" type="text" inputmode="decimal" value="1550" autocomplete="off">
+      </div>
+      <div class="rate">
+        <span>₱1 =</span>
+        <input id="rate" type="text" inputmode="decimal" value="1.55" aria-label="Rupees per peso">
+        <span>₹ — change this and every number on the page updates</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Before you fly</h2>
+    <p class="sub">Saved on this device.</p>
+    <div class="check" id="check"></div>
+    <button class="reset" type="button" id="reset">Clear all ticks</button>
+  </section>
+
+  <section>
+    <h2>Worth knowing</h2>
+    <ul class="notes">
+      <li><b>You need the Vietnam e-visa to leave Noi Bai airport.</b> There's no visa-free option for Indian passports. US$25 at evisa.gov.vn, roughly three working days. Without it you spend all 18 hours airside.</li>
+      <li><b>Philippine immigration will ask for paperwork.</b> Indians get 14 days visa-free, but you must show a passport valid six months out, hotel bookings for every night, proof of funds and your Manila–Chennai ticket. Have them printed.</li>
+      <li><b>Add checked baggage when you book the internal flights.</b> Cebu Pacific and AirAsia sell hand-carry-only fares. Twenty kilos costs ₱500–800 online and upwards of ₱2,000 at the counter.</li>
+      <li><b>Draw pesos before Palawan.</b> ATMs in Coron and El Nido run dry regularly and almost every boat operator is cash-only. Carry USD to change rather than rupees — Bengaluru rates for pesos are poor.</li>
+      <li><b>Keep small bills.</b> Nobody at a sari-sari store or on a jeepney can break ₱1,000. Split your withdrawals into hundreds early.</li>
+      <li><b>At the airports, take the white metered taxis or Grab.</b> The yellow airport cabs at Mactan and NAIA run a higher meter for the same road.</li>
+      <li><b>Watch the season.</b> December to May is the dry amihan; June to November is typhoon season, when Palawan boat tours get cancelled outright. Whatever the month, keep the morning of day 7 free of anything you can't miss.</li>
+      <li><b>Reef rules are enforced.</b> No touching turtles, no standing on coral, reef-safe sunscreen at the sanctuaries — rangers fine on the spot.</li>
+      <li><b>Four of your seven days involve moving.</b> Bus, two ferries and two flights. If anything slips, drop Bohol rather than Palawan — the ferry is the easiest thing to cancel.</li>
+      <li><b>Book the OceanJet Cebu–Bohol crossing ahead.</b> Morning sailings fill up, and the pier wants you there 45 minutes early.</li>
+      <li><b>Emergencies:</b> 911 works across the Philippines; in Vietnam it's 113 for police and 115 for an ambulance. Save the Indian Embassy in Manila's number before you fly.</li>
+      <li><b>Four Cebuano words carry you far:</b> salamat — thanks; pila? — how much; lugar lang — stopping the jeepney; lami — delicious.</li>
+    </ul>
+  </section>
+
+  <footer id="foot"></footer>
+</div>
+
+<script>
+const RATE_DEFAULT = 1.55;
+let rate = RATE_DEFAULT;
+let mode = "lean";
+
+/* ── data ──────────────────────────────────────────────
+   c = currency of the figure. l = lean, k = comfortable. */
+const GROUPS = [
+  { id:"booked", name:"Already booked", items:[
+    { n:"Bengaluru → Hanoi → Cebu, Manila → Chennai", i:"paid", c:"INR", l:29200, k:29200 },
+  ]},
+  { id:"hanoi", name:"Hanoi layover", items:[
+    { n:"Vietnam e-visa", i:"US$25, single entry", c:"INR", l:2250, k:2250 },
+    { n:"Airport to the Old Quarter and back", i:"bus 86 / Grab", c:"INR", l:300, k:1600 },
+    { n:"Food and coffee", i:"pho, banh mi, egg coffee", c:"INR", l:900, k:1800 },
+    { n:"Day room and shower", i:"hostel near Hoan Kiem", c:"INR", l:0, k:1800 },
+    { n:"Travel insurance", i:"10 days", c:"INR", l:1200, k:2500 },
+  ]},
+  { id:"flights", name:"Internal flights", items:[
+    { n:"Cebu → Palawan", i:"Coron or Puerto Princesa", c:"INR", l:3750, k:3750 },
+    { n:"Palawan → Manila", i:"", c:"INR", l:3750, k:3750 },
+    { n:"Checked bags, 20kg × 2", i:"add at booking, not the airport", c:"PHP", l:0, k:1200 },
+  ]},
+  { id:"ground", name:"Getting around", items:[
+    { n:"Mactan airport → South Bus Terminal", i:"", c:"PHP", l:200, k:350 },
+    { n:"Ceres bus to Moalboal", i:"about 3 hours", c:"PHP", l:250, k:250 },
+    { n:"Moalboal back to Cebu City", i:"", c:"PHP", l:250, k:250 },
+    { n:"Fast ferry Cebu ⇄ Bohol", i:"OceanJet, both ways", c:"PHP", l:2400, k:2800 },
+    { n:"Tricycles and jeepneys", i:"the whole week", c:"PHP", l:600, k:900 },
+    { n:"Palawan airport transfers", i:"", c:"PHP", l:300, k:500 },
+    { n:"Manila airport transfers", i:"NAIA terminals are far apart", c:"PHP", l:300, k:700 },
+  ]},
+  { id:"tours", name:"Tours and entrances", items:[
+    { n:"Sardine run, boat and gear", i:"Panagsama Beach, Moalboal", c:"PHP", l:800, k:1200 },
+    { n:"Moalboal marine sanctuary fee", i:"", c:"PHP", l:100, k:100 },
+    { n:"Kawasan Falls canyoneering", i:"Badian, full day", c:"PHP", l:0, k:2200 },
+    { n:"Bohol countryside tour", i:"shared van / private", c:"PHP", l:1800, k:3000 },
+    { n:"Chocolate Hills viewing deck", i:"Carmen", c:"PHP", l:100, k:100 },
+    { n:"Tarsier sanctuary", i:"Corella or Loboc", c:"PHP", l:200, k:200 },
+    { n:"Palawan island hopping", i:"Kayangan Lake / Tour A", c:"PHP", l:1700, k:2200 },
+    { n:"Palawan environmental fee", i:"", c:"PHP", l:300, k:300 },
+  ]},
+  { id:"beds", name:"Six nights", items:[
+    { n:"Moalboal, 2 nights", i:"dorm / private fan room", c:"PHP", l:1100, k:2600 },
+    { n:"Bohol, 1 night", i:"Panglao or Tagbilaran", c:"PHP", l:600, k:1400 },
+    { n:"Cebu City, 1 night", i:"near the pier", c:"PHP", l:600, k:1300 },
+    { n:"Palawan, 2 nights", i:"", c:"PHP", l:1300, k:2800 },
+  ]},
+  { id:"daily", name:"Food and daily", items:[
+    { n:"Meals, 7 days", i:"carinderia / restaurants", c:"PHP", l:3150, k:6300 },
+    { n:"Water, snacks, coffee", i:"", c:"PHP", l:500, k:1000 },
+    { n:"Tourist SIM", i:"Globe or Smart", c:"PHP", l:500, k:1000 },
+    { n:"Buffer", i:"the thing you forgot", c:"PHP", l:1500, k:3000 },
+  ]},
+];
+
+const DAYS = [
+  { t:"0", h:"Hanoi, eighteen hours", p:"Clear immigration on the e-visa, bus 86 into the Old Quarter, eat your way around Hoan Kiem, sleep an hour somewhere with a shower, back by midnight.", tag:"e-visa required" },
+  { t:"1", h:"Land in Cebu, ride south", p:"Mactan to the South Bus Terminal, then the Ceres bus to Moalboal. Tricycle down to Panagsama Beach. Eat and sleep.", tag:"" },
+  { t:"2", h:"The sardine run", p:"Walk in off Panagsama at seven, before the boats arrive — the bait ball sits thirty metres from shore. Turtles on the same swim.", tag:"Comfortable adds Kawasan canyoneering" },
+  { t:"3", h:"Back to Cebu, ferry to Bohol", p:"Morning bus north, then OceanJet from Pier 1, about two hours. Stay at Panglao or Tagbilaran.", tag:"" },
+  { t:"4", h:"Chocolate Hills and tarsiers", p:"Countryside tour: the viewing deck at Carmen, the tarsier sanctuary, the Loboc river if you fancy it. Evening ferry back to Cebu.", tag:"" },
+  { t:"5", h:"Fly west to Palawan", p:"Afternoon flight to Coron or Puerto Princesa. Book the next day's boat that evening, in person, at the pier — it's cheaper than online.", tag:"" },
+  { t:"6", h:"Island hopping", p:"Kayangan Lake and the twin lagoons if you're in Coron; Tour A if you made it to El Nido. Full day on a bangka.", tag:"" },
+  { t:"7", h:"Palawan → Manila → home", p:"Morning flight out. Leave four hours at NAIA — the terminals are a shuttle ride apart and the traffic is its own event.", tag:"" },
+];
+
+const CHECKS = [
+  ["evisa","Apply for the Vietnam e-visa","evisa.gov.vn, three working days, US$25"],
+  ["fly1","Book Cebu → Palawan","20kg bag added at booking"],
+  ["fly2","Book Palawan → Manila","20kg bag added at booking"],
+  ["beds","Book all six nights","immigration asks to see them"],
+  ["onward","Print the Manila → Chennai ticket","proof of onward travel"],
+  ["passport","Check passport validity","six months past the return date"],
+  ["insurance","Buy travel insurance",""],
+  ["ferry","Reserve OceanJet Cebu–Bohol seats","morning sailings fill up"],
+  ["cash","Carry USD to change, not rupees","and draw pesos before Palawan"],
+  ["maps","Download offline maps","Cebu, Bohol, Palawan"],
+  ["copies","Email yourself passport and visa scans",""],
+  ["reef","Pack reef-safe sunscreen and a dry bag",""],
+  ["pills","Motion-sickness pills for the ferry","two hours of open water"],
+];
+
+/* ── helpers ───────────────────────────────── */
+const inr = n => "₹" + Math.round(n).toLocaleString("en-IN");
+const php = n => "₱" + Math.round(n).toLocaleString("en-IN");
+const amtM = (it, m) => (m === "lean" ? it.l : it.k);
+const amt = it => amtM(it, mode);
+const toINRM = (it, m, r) => it.c === "INR" ? amtM(it, m) : amtM(it, m) * r;
+const toINR = it => toINRM(it, mode, rate);
+const totalFor = m => GROUPS.reduce((s, g) => s + g.items.reduce((t, it) => t + toINRM(it, m, rate), 0), 0);
+
+function store(k, v){ try{ localStorage.setItem(k, v); }catch(e){} }
+function recall(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
+
+/* ── build the ledger once ─────────────────── */
+const ledger = document.getElementById("ledger");
+GROUPS.forEach((g, gi) => {
+  const d = document.createElement("details");
+  d.className = "grp"; d.dataset.g = g.id;
+  if (gi === 2) d.open = true;
+  d.innerHTML =
+    '<summary><span class="chev"></span><span class="gname">' + g.name +
+    '</span><span class="gsum" data-sum="' + g.id + '"></span></summary>' +
+    '<div class="rows">' + g.items.map((it, i) =>
+      '<div class="row" data-g="' + g.id + '" data-i="' + i + '">' +
+        '<span class="n">' + it.n + (it.i ? '<i>' + it.i + '</i>' : '') + '</span>' +
+        '<span class="p"></span><span class="v"></span>' +
+      '</div>').join("") + '</div>';
+  ledger.appendChild(d);
+});
+
+/* ── itinerary ─────────────────────────────── */
+document.getElementById("days").innerHTML = DAYS.map(d =>
+  '<li class="day' + (d.t === "0" ? " pre" : "") + '">' +
+    '<span class="num">' + (d.t === "0" ? "HAN" : d.t) + '</span>' +
+    '<div><h3>' + d.h + '</h3><p>' + d.p + '</p>' +
+    (d.tag ? '<span class="tag">' + d.tag + '</span>' : '') + '</div>' +
+  '</li>').join("");
+
+/* ── checklist ─────────────────────────────── */
+const checkBox = document.getElementById("check");
+checkBox.innerHTML = CHECKS.map(c =>
+  '<label><input type="checkbox" data-c="' + c[0] + '"><span>' + c[1] +
+  (c[2] ? '<i>' + c[2] + '</i>' : '') + '</span></label>').join("");
+checkBox.querySelectorAll("input").forEach(el => {
+  if (recall("ph-check-" + el.dataset.c) === "1") el.checked = true;
+  el.addEventListener("change", () => store("ph-check-" + el.dataset.c, el.checked ? "1" : "0"));
+});
+document.getElementById("reset").addEventListener("click", () => {
+  checkBox.querySelectorAll("input").forEach(el => { el.checked = false; store("ph-check-" + el.dataset.c, "0"); });
+});
+
+/* ── number roll on mode change ────────────── */
+const reduced = (typeof matchMedia === "function") ? matchMedia("(prefers-reduced-motion: reduce)").matches : false;
+const rolling = {};
+function roll(el, from, to, fmt){
+  if (reduced || from === to){ el.textContent = fmt(to); return; }
+  const token = (rolling[el.id] = (rolling[el.id] || 0) + 1);
+  const t0 = performance.now(), dur = 420;
+  (function step(t){
+    if (rolling[el.id] !== token) return;
+    const k = Math.min(1, (t - t0) / dur);
+    const e = 1 - Math.pow(1 - k, 3);
+    el.textContent = fmt(from + (to - from) * e);
+    if (k < 1) requestAnimationFrame(step);
+  })(performance.now());
+}
+const prev = {};
+function set(id, val, fmt){
+  const el = document.getElementById(id);
+  roll(el, prev[id] ?? val, val, fmt);
+  prev[id] = val;
+}
+
+/* ── render ────────────────────────────────── */
+function render(){
+  let grand = 0, booked = 0, phpTotal = 0;
+
+  GROUPS.forEach(g => {
+    let gsum = 0;
+    g.items.forEach((it, i) => {
+      const v = toINR(it);
+      gsum += v;
+      if (g.id === "booked") booked += v;
+      if (it.c === "PHP") phpTotal += amt(it);
+      const row = ledger.querySelector('.row[data-g="' + g.id + '"][data-i="' + i + '"]');
+      row.classList.toggle("zero", amt(it) === 0);
+      row.querySelector(".p").textContent = it.c === "PHP" ? php(amt(it)) : "";
+      row.querySelector(".v").textContent = amt(it) === 0 ? "" : inr(v);
+    });
+    grand += gsum;
+    ledger.querySelector('[data-sum="' + g.id + '"]').textContent = inr(gsum);
+  });
+
+  const onTheGround = GROUPS
+    .filter(g => ["ground","tours","beds","daily"].includes(g.id))
+    .reduce((s,g) => s + g.items.reduce((t,it) => t + toINR(it), 0), 0);
+
+  set("fig", grand, inr);
+  set("left", grand - booked, inr);
+  set("daily", onTheGround / 7, inr);
+
+  document.querySelector('[data-bt="lean"]').textContent = inr(totalFor("lean"));
+  document.querySelector('[data-bt="comfortable"]').textContent = inr(totalFor("comfortable"));
+
+  document.getElementById("cap").textContent =
+    mode === "lean"
+      ? "Everything, door to door, travelling lean"
+      : "Everything, door to door, travelling comfortably";
+  document.getElementById("paidnote").textContent =
+    "Flights already paid: " + inr(booked) + ". Peso spending across the week: " + php(phpTotal) + ".";
+  document.getElementById("foot").textContent =
+    "Prices are 2026 street rates and move with the season. Converted at ₱1 = ₹" +
+    rate.toFixed(2) + ". Tours booked in person on the ground, not online. " +
+    "Not counted: diving, nightlife, shopping, and anything a tout convinces you of.";
+}
+
+/* ── mode switch ───────────────────────────── */
+document.querySelectorAll(".switch button").forEach(b => {
+  b.addEventListener("click", () => {
+    mode = b.dataset.set;
+    document.documentElement.dataset.mode = mode;
+    document.querySelectorAll(".switch button").forEach(x =>
+      x.setAttribute("aria-pressed", String(x.dataset.set === mode)));
+    const tc = document.querySelector('meta[name="theme-color"]');
+    if (tc) tc.setAttribute("content", mode === "lean" ? "#0E4A55" : "#8C5504");
+    store("ph-mode", mode);
+    render();
+  });
+});
+
+/* ── converter ─────────────────────────────── */
+const fPhp = document.getElementById("php"), fInr = document.getElementById("inr"), fRate = document.getElementById("rate");
+const num = s => { const v = parseFloat(String(s).replace(/[^0-9.]/g, "")); return isFinite(v) ? v : 0; };
+function syncConv(){ fInr.value = (num(fPhp.value) * rate).toFixed(0); }
+fPhp.addEventListener("input", syncConv);
+fInr.addEventListener("input", () => { fPhp.value = (num(fInr.value) / rate).toFixed(0); });
+fRate.addEventListener("input", () => {
+  const r = num(fRate.value);
+  if (r > 0.1 && r < 10){ rate = r; store("ph-rate", String(r)); syncConv(); render(); }
+});
+
+/* ── boot ──────────────────────────────────── */
+const savedRate = parseFloat(recall("ph-rate"));
+if (savedRate > 0.1 && savedRate < 10){ rate = savedRate; fRate.value = savedRate; }
+if (recall("ph-mode") === "comfortable"){
+  mode = "comfortable";
+  document.documentElement.dataset.mode = "comfortable";
+  document.querySelectorAll(".switch button").forEach(x =>
+    x.setAttribute("aria-pressed", String(x.dataset.set === "comfortable")));
+}
+syncConv();
+render();
+
+/* ── offline ───────────────────────────────── */
+if ("serviceWorker" in navigator) {
+  try { navigator.serviceWorker.register("./sw.js").catch(function(){}); } catch(e){}
+}
+</script>
+</body>
+</html>
